@@ -4,5 +4,6 @@
 
 ![pantallazo](pantallazo_2.png "Pantallazo")
 
-<h2>Colegio San Jose de Guanenta</h2>
-<h3>Especialidad en Sistemas - 2024</h3>
+![pantallazo](pantallazo_3.png "Pantallazo")
+
+![pantallazo](pantallazo_4.png "Pantallazo")

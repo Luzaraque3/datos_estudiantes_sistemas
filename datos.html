@@ -7,52 +7,220 @@
 </head>
 <body>
 
-    <h2>Colegio San Jose de Guanenta</h2>
-    <h3>Especialidad en Sistemas - 2024</h3>
+<h2>COLEGIO SAN JOSE DE GUANENTÁ - Especialidad en Sistemas - 2024</h2>
+<h3>DATOS DEL ESTUDIANTE</h3>
 
-<form action="#" method="post">
-    <label for="apellidos">Apellidos:</label><br>
-    <input type="text" id="apellidos" name="apellidos"><br><br>
+<form id="formularioEstudiante" action="#" method="post" onsubmit="return validarFormulario()">
+    <fieldset>
+        <legend>Datos del Estudiante</legend>
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos" required><br><br>
 
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-    <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
-    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
 
-    <label for="edad">Edad:</label><br>
-    <input type="number" id="edad" name="edad"><br><br>
+        <label for="lugar_nacimiento">Lugar de Nacimiento:</label><br>
+        <input type="text" id="lugar_nacimiento" name="lugar_nacimiento" required><br><br>
 
-    <label for="tipo_documento">Tipo de Documento:</label><br>
-    <select id="tipo_documento" name="tipo_documento">
-        <option value="ti">T.I.</option>
-        <option value="cc">C.C.</option>
-        <!-- Puedes agregar más opciones según sea necesario -->
-    </select><br><br>
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" required><br><br>
 
-    <label for="numero_documento">Número de Documento de Identidad:</label><br>
-    <input type="text" id="numero_documento" name="numero_documento"><br><br>
+        <label for="tipo_documento_ti">Tipo Documento Identidad: T.I.:</label>
+        <input type="checkbox" id="tipo_documento_ti" name="tipo_documento_ti" value="ti">
+        <label for="tipo_documento_cc">C.C.:</label>
+        <input type="checkbox" id="tipo_documento_cc" name="tipo_documento_cc" value="cc"><br><br>
 
-    <label for="lugar_expedicion">Lugar de Expedición del Documento de Identidad:</label><br>
-    <input type="text" id="lugar_expedicion" name="lugar_expedicion"><br><br>
+        <label for="numero_documento">Número Documento Identidad:</label><br>
+        <input type="text" id="numero_documento" name="numero_documento" required><br><br>
 
-    <label for="direccion">Dirección:</label><br>
-    <input type="text" id="direccion" name="direccion"><br><br>
+        <label for="lugar_expedicion">Lugar Expedición Documento Identidad:</label><br>
+        <input type="text" id="lugar_expedicion" name="lugar_expedicion" required><br><br>
 
-    <label for="barrio">Barrio:</label><br>
-    <input type="text" id="barrio" name="barrio"><br><br>
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" required><br><br>
 
-    <label for="ciudad">Ciudad:</label><br>
-    <input type="text" id="ciudad" name="ciudad"><br><br>
+        <label for="barrio">Barrio:</label><br>
+        <input type="text" id="barrio" name="barrio" required><br><br>
 
-    <label for="telefono">Teléfono:</label><br>
-    <input type="tel" id="telefono" name="telefono"><br><br>
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
 
-    <label for="celular">Celular:</label><br>
-    <input type="tel" id="celular" name="celular"><br><br>
+        <label for="celular">Celular:</label><br>
+        <input type="tel" id="celular" name="celular" required><br><br>
+
+        <label for="email_personal">E-mail personal:</label><br>
+        <input type="email" id="email_personal" name="email_personal" required><br><br>
+
+        <label for="ciudad">Ciudad:</label><br>
+        <input type="text" id="ciudad" name="ciudad" required><br><br>
+
+        <label for="tipo_sangre">Tipo de Sangre:</label><br>
+        <input type="text" id="tipo_sangre" name="tipo_sangre"><br><br>
+
+        <label for="email_institucional">E-mail institucional:</label><br>
+        <input type="email" id="email_institucional" name="email_institucional"><br><br>
+
+        <label for="eps">EPS:</label><br>
+        <input type="text" id="eps" name="eps"><br><br>
+
+        <label for="enfermedad_si">¿Sufre alguna enfermedad? Si:</label>
+        <input type="checkbox" id="enfermedad_si" name="enfermedad_si" value="si">
+        <label for="enfermedad_no">No:</label>
+        <input type="checkbox" id="enfermedad_no" name="enfermedad_no" value="no"><br><br>
+
+        <label for="enfermedad_cual">Cuál?:</label><br>
+        <input type="text" id="enfermedad_cual" name="enfermedad_cual"><br><br>
+
+        <label for="estrato">Estrato socioeconómico:</label><br>
+        <input type="text" id="estrato" name="estrato"><br><br>
+
+        <label for="familias_accion_si">Familias en Acción: Si:</label>
+        <input type="checkbox" id="familias_accion_si" name="familias_accion_si" value="si">
+        <label for="familias_accion_no">No:</label>
+        <input type="checkbox" id="familias_accion_no" name="familias_accion_no" value="no"><br><br>
+
+        <label for="religion">Tipo de Religión:</label><br>
+        <input type="text" id="religion" name="religion"><br><br>
+
+        <label for="relacion_padres_casados">Relación Padres: Casados:</label>
+        <input type="checkbox" id="relacion_padres_casados" name="relacion_padres_casados" value="casados">
+        <label for="relacion_padres_divorciados">Divorciados:</label>
+        <input type="checkbox" id="relacion_padres_divorciados" name="relacion_padres_divorciados" value="divorciados"><br>
+        <label for="relacion_padres_union_libre">Unión Libre:</label>
+        <input type="checkbox" id="relacion_padres_union_libre" name="relacion_padres_union_libre" value="union_libre">
+        <label for="relacion_padres_otro">Otro:</label>
+        <input type="text" id="relacion_padres_otro" name="relacion_padres_otro"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Computadora e Internet en casa</legend>
+        <label for="computadora_casa_si">Computadora en casa: Si:</label>
+        <input type="checkbox" id="computadora_casa_si" name="computadora_casa_si" value="si">
+        <label for="computadora_casa_no">No:</label>
+        <input type="checkbox" id="computadora_casa_no" name="computadora_casa_no" value="no"><br><br>
+
+        <label for="internet_casa_si">Internet en casa: Si:</label>
+        <input type="checkbox" id="internet_casa_si" name="internet_casa_si" value="si">
+        <label for="internet_casa_no">No:</label>
+        <input type="checkbox" id="internet_casa_no" name="internet_casa_no" value="no"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Actividades en tiempo libre y Expectativas</legend>
+        <label for="actividades_tiempo_libre">Principales actividades en tiempo libre:</label><br>
+        <textarea id="actividades_tiempo_libre" name="actividades_tiempo_libre" rows="4" cols="50"></textarea><br><br>
+
+        <label for="expectativas">Propósitos y expectativas personales y académicas:</label><br>
+        <textarea id="expectativas" name="expectativas" rows="4" cols="50"></textarea><br><br>
+    </fieldset>
+
+    <h3>DATOS DEL PADRE</h3>
+    <fieldset>
+        <legend>Datos del Padre</legend>
+        <label for="padre_apellidos">Apellidos:</label><br>
+        <input type="text" id="padre_apellidos" name="padre_apellidos"><br><br>
+
+        <label for="padre_nombre">Nombre:</label><br>
+        <input type="text" id="padre_nombre" name="padre_nombre"><br><br>
+
+        <label for="padre_direccion">Dirección:</label><br>
+        <input type="text" id="padre_direccion" name="padre_direccion"><br><br>
+
+        <label for="padre_barrio">Barrio:</label><br>
+        <input type="text" id="padre_barrio" name="padre_barrio"><br><br>
+
+        <label for="padre_telefono">Teléfono:</label><br>
+        <input type="tel" id="padre_telefono" name="padre_telefono"><br><br>
+
+        <label for="padre_celular">Celular:</label><br>
+        <input type="tel" id="padre_celular" name="padre_celular"><br><br>
+
+        <label for="padre_email">E-mail:</label><br>
+        <input type="email" id="padre_email" name="padre_email"><br><br>
+
+        <label for="padre_ocupacion">Ocupación:</label><br>
+        <input type="text" id="padre_ocupacion" name="padre_ocupacion"><br><br>
+    </fieldset>
+
+    <h3>DATOS DE LA MADRE</h3>
+    <fieldset>
+        <legend>Datos de la Madre</legend>
+        <label for="madre_apellidos">Apellidos:</label><br>
+        <input type="text" id="madre_apellidos" name="madre_apellidos"><br><br>
+
+        <label for="madre_nombre">Nombre:</label><br>
+        <input type="text" id="madre_nombre" name="madre_nombre"><br><br>
+
+        <label for="madre_direccion">Dirección:</label><br>
+        <input type="text" id="madre_direccion" name="madre_direccion"><br><br>
+
+        <label for="madre_barrio">Barrio:</label><br>
+        <input type="text" id="madre_barrio" name="madre_barrio"><br><br>
+
+        <label for="madre_telefono">Teléfono:</label><br>
+        <input type="tel" id="madre_telefono" name="madre_telefono"><br><br>
+
+        <label for="madre_celular">Celular:</label><br>
+        <input type="tel" id="madre_celular" name="madre_celular"><br><br>
+
+        <label for="madre_email">E-mail:</label><br>
+        <input type="email" id="madre_email" name="madre_email"><br><br>
+
+        <label for="madre_ocupacion">Ocupación:</label><br>
+        <input type="text" id="madre_ocupacion" name="madre_ocupacion"><br><br>
+    </fieldset>
+
+    <h3>DATOS DEL ACUDIENTE</h3>
+    <fieldset>
+        <legend>Datos del Acudiente</legend>
+        <label for="acudiente_apellidos">Apellidos:</label><br>
+        <input type="text" id="acudiente_apellidos" name="acudiente_apellidos"><br><br>
+
+        <label for="acudiente_nombre">Nombre:</label><br>
+        <input type="text" id="acudiente_nombre" name="acudiente_nombre"><br><br>
+
+        <label for="acudiente_parentesco">Parentesco:</label><br>
+        <input type="text" id="acudiente_parentesco" name="acudiente_parentesco"><br><br>
+
+        <label for="acudiente_direccion">Dirección:</label><br>
+        <input type="text" id="acudiente_direccion" name="acudiente_direccion"><br><br>
+
+        <label for="acudiente_barrio">Barrio:</label><br>
+        <input type="text" id="acudiente_barrio" name="acudiente_barrio"><br><br>
+
+        <label for="acudiente_telefono">Teléfono:</label><br>
+        <input type="tel" id="acudiente_telefono" name="acudiente_telefono"><br><br>
+
+        <label for="acudiente_celular">Celular:</label><br>
+        <input type="tel" id="acudiente_celular" name="acudiente_celular"><br><br>
+
+        <label for="acudiente_email">E-mail:</label><br>
+        <input type="email" id="acudiente_email" name="acudiente_email"><br><br>
+
+        <label for="acudiente_ocupacion">Ocupación:</label><br>
+        <input type="text" id="acudiente_ocupacion" name="acudiente_ocupacion"><br><br>
+    </fieldset>
 
     <input type="submit" value="Enviar">
 </form>
+
+<script>
+    function validarFormulario() {
+        // Validación de la edad
+        var edad = document.getElementById("edad").value;
+        if (edad < 18) {
+            alert("Debe ser mayor de edad para completar este formulario.");
+            return false;
+        }
+
+        // Otras validaciones pueden ser agregadas aquí
+
+        return true; // Si todas las validaciones pasan, devuelve true para enviar el formulario
+    }
+</script>
 
 </body>
 </html>
