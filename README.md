@@ -7,3 +7,7 @@
 ![pantallazo](pantallazo_3.png "Pantallazo")
 
 ![pantallazo](pantallazo_4.png "Pantallazo")
+
+![pantallazo](pantallazo_5.png "Pantallazo")
+
+![pantallazo](pantallazo_6.png "Pantallazo")
